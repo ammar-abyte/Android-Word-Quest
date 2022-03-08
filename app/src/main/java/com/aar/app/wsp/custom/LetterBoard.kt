@@ -118,7 +118,8 @@ class LetterBoard @JvmOverloads constructor(
     }
 
     private fun setGridLineVisibility(visible: Boolean) {
-        if (!visible) gridLineBackground.visibility = INVISIBLE else gridLineBackground.visibility = VISIBLE
+        if (!visible) gridLineBackground.visibility = INVISIBLE else gridLineBackground.visibility =
+            VISIBLE
     }
 
     private fun setGridLineColor(color: Int) {
@@ -165,7 +166,8 @@ class LetterBoard @JvmOverloads constructor(
             letterColor = a.getColor(R.styleable.LetterBoard_letterColor, letterColor)
             streakWidth = a.getDimensionPixelSize(R.styleable.LetterBoard_streakWidth, streakWidth)
             snapToGrid = a.getInteger(R.styleable.LetterBoard_snapToGrid, snapToGrid)
-            gridLineVisibility = a.getBoolean(R.styleable.LetterBoard_gridLineVisibility, gridLineVisibility)
+            gridLineVisibility =
+                a.getBoolean(R.styleable.LetterBoard_gridLineVisibility, gridLineVisibility)
             setGridWidth(gridWidth)
             setGridHeight(gridHeight)
             setGridLineColor(lineColor)
@@ -204,7 +206,8 @@ class LetterBoard @JvmOverloads constructor(
             val count = getIndexLength(start, end)
             val buff = CharArray(count)
             for (i in 0 until count) {
-                buff[i] = _dataAdapter.getLetter(start.row + dir.yOffset * i, start.col + dir.xOffset * i)
+                buff[i] =
+                    _dataAdapter.getLetter(start.row + dir.yOffset * i, start.col + dir.xOffset * i)
             }
             return String(buff)
         }

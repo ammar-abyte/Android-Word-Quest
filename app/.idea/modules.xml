@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/679925559/Android-Word-Quest.iml" filepath="$PROJECT_DIR$/.idea/modules/679925559/Android-Word-Quest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Android-Word-Quest.app.iml" filepath="$PROJECT_DIR$/.idea/modules/Android-Word-Quest.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/568889501/Android-Word-Quest.horizontalspinner.iml" filepath="$PROJECT_DIR$/.idea/modules/568889501/Android-Word-Quest.horizontalspinner.iml" />
+    </modules>
+  </component>
+</project>
