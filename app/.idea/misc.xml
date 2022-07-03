@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/_Ammar/Game/Android-Word-Quest/app/src/main/res/drawable/bg_progress.xml" value="0.1365" />
         <entry key="..\:/_Ammar/Game/Android-Word-Quest/app/src/main/res/layout/activity_game_play.xml" value="0.1796875" />
+        <entry key="..\:/_Ammar/Game/Android-Word-Quest/app/src/main/res/layout/item_word.xml" value="0.1796875" />
         <entry key="..\:/_Ammar/Game/Android-Word-Quest/app/src/main/res/layout/partial_game_content.xml" value="0.1796875" />
+        <entry key="..\:/_Ammar/Game/Android-Word-Quest/app/src/main/res/layout/partial_game_header.xml" value="0.1796875" />
+        <entry key="..\:/_Ammar/Game/Android-Word-Quest/app/src/main/res/xml/prefs_main.xml" value="0.1796875" />
       </map>
     </option>
   </component>

@@ -104,7 +104,11 @@ class GamePlayActivity : FullscreenActivity() {
             }
 
             override fun onSelectionEnd(streakLine: StreakLine, str: String) {
-                viewModel.answerWord(str, STREAK_LINE_MAPPER.revMap(streakLine), preferences.reverseMatching())
+                viewModel.answerWord(
+                    str,
+                    STREAK_LINE_MAPPER.revMap(streakLine),
+                    preferences.reverseMatching()
+                )
                 text_selection_layout.gone()
                 text_selection.text = str
             }
@@ -133,14 +137,20 @@ class GamePlayActivity : FullscreenActivity() {
     private fun initViewModel() {
         viewModel.onTimer.observe(this, Observer { duration: Int -> showDuration(duration) })
         viewModel.onCountDown.observe(this, Observer { countDown: Int -> showCountDown(countDown) })
-        viewModel.onGameState.observe(this, Observer { gameState: GameState -> onGameStateChanged(gameState) })
-        viewModel.onAnswerResult.observe(this, Observer { answerResult: AnswerResult -> onAnswerResult(answerResult) })
+        viewModel.onGameState.observe(
+            this,
+            Observer { gameState: GameState -> onGameStateChanged(gameState) })
+        viewModel.onAnswerResult.observe(
+            this,
+            Observer { answerResult: AnswerResult -> onAnswerResult(answerResult) })
         viewModel.onCurrentWordChanged.observe(this, Observer { usedWord: UsedWord ->
             text_current_selected_word.setText(usedWord.string)
             progress_word_duration.max = usedWord.maxDuration * 100
             animateProgress(progress_word_duration, usedWord.remainingDuration * 100)
         })
-        viewModel.onCurrentWordCountDown.observe(this, Observer { duration: Int -> animateProgress(progress_word_duration, duration * 100) })
+        viewModel.onCurrentWordCountDown.observe(
+            this,
+            Observer { duration: Int -> animateProgress(progress_word_duration, duration * 100) })
     }
 
     private fun loadOrGenerateNewGame() {
@@ -352,7 +362,10 @@ class GamePlayActivity : FullscreenActivity() {
             override fun onAnimationEnd(animation: Animation) {
                 Handler().postDelayed({
                     val intent = Intent(this@GamePlayActivity, GameOverActivity::class.java)
-                    intent.putExtra(GameOverActivity.EXTRA_GAME_ROUND_ID, state.gameData?.id.orZero())
+                    intent.putExtra(
+                        GameOverActivity.EXTRA_GAME_ROUND_ID,
+                        state.gameData?.id.orZero()
+                    )
                     startActivity(intent)
                     finish()
                 }, 800)
